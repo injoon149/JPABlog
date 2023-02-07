@@ -1,0 +1,62 @@
+server:
+  port: 5000
+  servlet:
+    context-path: /
+    encoding:
+      charset: UTF-8
+spring:
+  mvc:
+    view:
+      prefix: /WEB-INF/jblog/
+      suffix: .jsp
+      
+      
+##데이터소스 설정
+#  datasource:
+#    driver-class-name : org.h2.Driver
+#    url : jdbc:h2:mem:testdb
+#    username: sa
+#    password:
+
+#데이터소스 설정
+  datasource:
+    url: jdbc:mysql://catchexdb.cwp0z17qdduj.ap-northeast-2.rds.amazonaws.com:3306/catchexdb
+    username: admin
+    password: catchCMC#12
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+    
+##JPA 설정
+#  jpa:
+#    open-in-view: true
+#    database-platform: org.hibernate.dialect.H2Dialect
+#    show-sql: true
+#    hibernate:
+#      naming:
+#        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+#      ddl-auto: update
+#      use-new-id-generator-mappings: false
+#    properties:
+#      hibernate.format_sql: true
+
+#JPA 설정
+  jpa:
+    open-in-view: true
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    database: mysql
+    show-sql: true
+    hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        ddl-auto: update
+        use-new-id-generator-mappings: false
+    properties:
+      hibernate.format_sql: true
+      
+
+ 
+
+ 
+
+
+
